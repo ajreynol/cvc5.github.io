@@ -31,6 +31,16 @@ cvc5 is a joint project led by Stanford University and the University of Iowa.
 {% assign recent_post = site.posts.first %}
 <a href="{{ recent_post.url }}">{{ recent_post.title }}</a>
 
+### Older Blog Posts
+
+<ul>
+{% for post in site.posts offset:1 %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})</li>
+{% endfor %}
+</ul>
+
+See all posts on the [blog page](/blog.html).
+
 
 # Technical Support
 
